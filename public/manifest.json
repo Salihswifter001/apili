@@ -1,0 +1,38 @@
+{
+  "name": "Octaverum AI - Music Generation",
+  "short_name": "OctaverumAI",
+  "description": "Create music with artificial intelligence",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a12",
+  "theme_color": "#0a0a12",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/public/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/public/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Generate Music",
+      "url": "/music/generate",
+      "description": "Create a new track with AI"
+    },
+    {
+      "name": "My Library",
+      "url": "/music/library",
+      "description": "View your music library"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

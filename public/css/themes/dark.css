@@ -1,0 +1,150 @@
+/**
+ * Octaverum AI - Dark Cyberpunk Theme
+ * This theme features dark backgrounds with neon accents
+ */
+
+:root {
+    --bg-primary: #0a0a12;
+    --bg-secondary: #12121f;
+    --bg-tertiary: #1a1a2e;
+    --text-primary: #e0e0ff;
+    --text-secondary: #a0a0d0;
+    --text-muted: #6a6a9f;
+    --accent-primary: #0ff7ef;
+    --accent-secondary: #f72a8a;
+    --accent-tertiary: #7931ff;
+    --glow-primary: rgba(15, 247, 239, 0.5);
+    --glow-secondary: rgba(247, 42, 138, 0.5);
+    --glow-tertiary: rgba(121, 49, 255, 0.5);
+    --border-color: #343465;
+    --card-bg: rgba(25, 25, 45, 0.7);
+    --input-bg: rgba(30, 30, 50, 0.6);
+}
+
+/* Add custom dark theme elements */
+body {
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(121, 49, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(15, 247, 239, 0.1) 0%, transparent 40%);
+}
+
+.navbar, .footer {
+    background-color: rgba(10, 10, 18, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Card style with neon border effect */
+.feature-card:hover, .pricing-card:hover, .track-card:hover {
+    box-shadow: 0 0 15px var(--glow-primary);
+    animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 5px var(--glow-primary);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--glow-primary), 0 0 30px var(--glow-primary);
+    }
+}
+
+/* Text glitch effect */
+.glitch-text {
+    text-shadow: 
+        0 0 5px var(--accent-primary),
+        0 0 10px var(--accent-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--accent-primary), var(--accent-secondary));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--accent-secondary), var(--accent-primary));
+}
+
+/* Form elements */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 0 2px var(--glow-primary), 0 0 10px var(--glow-primary);
+}
+
+/* Buttons with glowing effect */
+.btn-primary:hover, .btn-glow:hover {
+    box-shadow: 0 0 15px var(--glow-primary), 0 0 25px var(--glow-primary);
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 0 15px var(--glow-secondary), 0 0 25px var(--glow-secondary);
+}
+
+/* Custom progress bars */
+.progress-current, .usage-progress {
+    box-shadow: 0 0 10px var(--glow-primary);
+}
+
+/* Player elements */
+.player-btn:hover {
+    box-shadow: 0 0 15px var(--glow-primary);
+}
+
+/* Modal overlay */
+.modal {
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Welcome steps glow */
+.welcome-steps .step-number {
+    box-shadow: 0 0 15px var(--glow-primary);
+}
+
+/* Flash message */
+#flash-message {
+    box-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Hero section */
+.hero-glow {
+    opacity: 0.3;
+    filter: blur(60px);
+}
+
+/* Dashboard stats */
+.stat-icon {
+    box-shadow: inset 0 0 10px var(--glow-primary);
+}
+
+/* Track cards */
+.track-overlay, .playlist-overlay {
+    background: linear-gradient(to top, rgba(10, 10, 18, 0.9) 0%, rgba(10, 10, 18, 0.5) 50%, transparent 100%);
+}
+
+.play-btn, .view-btn {
+    box-shadow: 0 0 20px var(--glow-primary);
+}
+
+/* Visualizations */
+.player-visualization-container {
+    background-color: rgba(15, 15, 25, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+canvas#visualization {
+    filter: saturate(1.5) contrast(1.2);
+}
